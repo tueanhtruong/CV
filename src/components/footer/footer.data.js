@@ -1,6 +1,6 @@
 export default [
   {
-    header: "About Us",
+    header: "About Me",
     items: [
       {
         path: "/",
@@ -29,7 +29,7 @@ export default [
     ],
   },
   {
-    header: "Our Information",
+    header: "My Information",
     items: [
       {
         path: "/",

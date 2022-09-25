@@ -77,7 +77,7 @@ const styles = {
   drawer: {
     width: "100%",
     height: "100%",
-    background: "linear-gradient(180deg, #E1F6F9 0%, #FCFCE8 100%)",
+    background: "linear-gradient(180deg, #E1F6F9 0%, #0361d015 100%)",
   },
 
   close: {

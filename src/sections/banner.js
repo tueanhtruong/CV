@@ -2,10 +2,8 @@ import { Box, Flex, Container, Image, Heading, Text } from "theme-ui";
 
 import React from "react";
 
-import VideoBtn from "components/video-btn";
 import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
-import BannerBG from "assets/banner-bg-1-1.png";
 import BannerTextLine from "assets/banner-text-line.png";
 import BannerPattern from "assets/banner-pattern.png";
 import BannerImage from "assets/banner-image-1.webp";
@@ -105,8 +103,8 @@ const styles = {
     paddingTop: ["100px", "120px"],
     paddingBottom: ["0px", null, "80px"],
     backgroundImage: [
-      "linear-gradient(-180deg, #E0F5FA 0%, #FFFDE6 100%)",
-      `url(${BannerBG})`,
+      "linear-gradient(-180deg, #E0F5FA 0%, #0361d015 100%)",
+      // `url(${BannerBG})`,
     ],
     backgroundPosition: "left top",
     backgroundRepeat: "no-repeat",
