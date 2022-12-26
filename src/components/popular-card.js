@@ -15,7 +15,7 @@ const PopularCard = (props) => {
       sx={styles.popularCard}
       className={`${status === true ? "active" : ""}`}
     >
-      <Box sx={styles.popularCard.videoBtn}>
+      {/* <Box sx={styles.popularCard.videoBtn}>
         {props.logo ? (
           <Image
             src={props.logo}
@@ -28,7 +28,7 @@ const PopularCard = (props) => {
         ) : (
           <VideoBtn path={props.videoLink} />
         )}
-      </Box>
+      </Box> */}
       <Box sx={styles.popularCard.main}>
         <Box sx={styles.popularCard.top}>
           <Box sx={styles.popularCard.content}>
@@ -108,7 +108,7 @@ const styles = {
 
     borderRadius: "10px",
     pt: ["25px", null, null, 0],
-    paddingLeft: ["25px", null, null, "170px"],
+    paddingLeft: ["25px", null, null, "40px"],
     paddingRight: ["25px", null, null, "40px"],
     position: "relative",
     border: "1px solid #F3F4F5",
