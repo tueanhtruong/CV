@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 export default function SEO({
-  description = 'startup landing descriptions',
-  author = 'RedQ, Inc',
+  description = "startup landing descriptions",
+  author = "RedQ, Inc",
   meta,
-  title = 'startup landing title',
+  title = "startup landing title",
 }) {
   const metaData = [
     {
@@ -47,6 +47,7 @@ export default function SEO({
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}
+      <link rel="canonical" href="https://tue-truong-profile.vercel.app/" />
     </Head>
   );
 }
