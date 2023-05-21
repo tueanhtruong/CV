@@ -23,18 +23,18 @@ const Banner = () => {
                 <FaStar />
                 Trused by over 4,332 students
               </Box> */}
-              <Heading as="h3">
+              <Heading as="h1">
                 I’m Tue Truong
-                <br /> Front End DEVELOPER
-                <br /> based in Da Nang.
+                <br /> SOFTWARE ENGINEER
+                <br /> in Da Nang City.
               </Heading>
               <Text as="p">
                 I'm an energetic and hopeful software engineer. I am primarily a
-                Web Front End Developer.  I've been with DataHouse Asia for a
-                year as a software engineer. My strong points are working
-                independently, being interactive, proactive, and being willing
-                to learn. Besides, I am eager to be challenged so that I can
-                grow and improve my skills.
+                Web Front End.  I've been with DataHouse Asia for a year as a
+                software engineer. My strong points are working independently,
+                being interactive, proactive, and being willing to learn.
+                Besides, I am eager to be challenged so that I can grow and
+                improve my skills.
               </Text>
               {/* <Box as="form" sx={styles.banner.form}>
                 <Box as="label" htmlFor="search" variant="styles.srOnly">
@@ -124,7 +124,7 @@ const styles = {
     },
     content: {
       paddingRight: [0, 0, 0, 0, "40px", 0, 0],
-      h3: {
+      h1: {
         lineHeight: 1.18,
         color: "black",
         fontWeight: "bold",

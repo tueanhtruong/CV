@@ -69,7 +69,7 @@ const styles = {
     "&.sticky": {
       backgroundColor: "background",
       color: "text",
-      py: "15px",
+      py: "2px",
       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
     },
   },

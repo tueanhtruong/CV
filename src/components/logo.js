@@ -2,7 +2,7 @@
 import { jsx, Image, Text } from "theme-ui";
 import { Link } from "components/link";
 import reactLogo from "assets/react-logo.webp";
-import logoName from "assets/logo-name.png";
+import logoName from "assets/tue-truong-software-engineer-da-nang.png";
 import { motion } from "framer-motion";
 
 export default function Logo() {
@@ -34,12 +34,18 @@ export default function Logo() {
         <Image
           src={logoName}
           alt="startup landing logo"
-          css={{ borderRadius: 8, height: 54 }}
+          css={{
+            height: 54,
+            width: 94,
+            objectFit: "cover",
+            margin: "4px auto",
+            display: "block",
+          }}
         />
       </motion.div>
-      <Text as="h3" css={{ marginLeft: 8 }}>
+      {/* <Text as="h3" css={{ marginLeft: 8 }}>
         Tue Truong
-      </Text>
+      </Text> */}
     </Link>
   );
 }

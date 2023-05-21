@@ -23,8 +23,8 @@ export default function IndexPage() {
         <VideoProvider>
           <Layout>
             <SEO
-              description="I am Tue Truong Front End DEVELOPER based in Da Nang. My strong points are working independently, being interactive, proactive, and being willing to learn."
-              title="Front End DEVELOPER"
+              description="I am Tue Truong Front End DEVELOPER based in Da Nang city. My strong points are working independently, being interactive, proactive, and being willing to learn."
+              title="Tue Truong - Software Engineer"
             />
             <Banner />
             <FavoriteCourse />
