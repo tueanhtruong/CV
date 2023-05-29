@@ -6,14 +6,14 @@ export default [
         path: "/",
         label: "Tue Truong",
       },
-      {
-        path: "/",
-        label: "224 Ton Duc Thang",
-      },
-      {
-        path: "/",
-        label: "Tan An, Hoi An, Quang Nam",
-      },
+      // {
+      //   path: "/",
+      //   label: "224 Ton Duc Thang",
+      // },
+      // {
+      //   path: "/",
+      //   label: "Tan An, Hoi An, Quang Nam",
+      // },
       // {
       //   path: "/",
       //   label: "About Us",
@@ -31,10 +31,10 @@ export default [
   {
     header: "My Information",
     items: [
-      {
-        path: "/",
-        label: "Contact: 0335062007",
-      },
+      // {
+      //   path: "/",
+      //   label: "Contact: 0335062007",
+      // },
       {
         path: "/",
         label: "Email: anhtuetnmt@gmail.com",
