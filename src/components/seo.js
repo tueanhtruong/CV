@@ -48,6 +48,12 @@ export default function SEO({
         <meta key={i} name={name} content={content} />
       ))}
       <link rel="canonical" href="https://tue-truong-profile.vercel.app/" />
+      {/* <!-- Google tag (gtag.js) --> */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XZD7MN8K5P"
+      ></script>
+      <script src="./googleTag.js"></script>
     </Head>
   );
 }
