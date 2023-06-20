@@ -14,15 +14,23 @@ const workflowData = [
   },
   {
     title: "Junior Web Developer, May 2021 - Jul 2022",
-    text: ["I mainly work as an FE developer for the Lumisight platform."],
+    text: [
+      "I mainly work as an FE developer for the Lumisight platform.",
+      "- Develop a solution for designing and implementing a web app.",
+      "- Review code and support other team members.",
+      "- Manage tasks and estimate effort for the FE team, responsible for quality.",
+      "- Technical mentor for interns.",
+    ],
   },
   {
     title: "Medior Software Developer, Jul 2022 - Present",
     text: [
       "- Develop a solution for designing and implementing a web app.",
-      "- Review code and support other team members.",
+      "- Consult and design front-end architecture and solutions.",
+      "- Research and apply new technologies to improve the FE codebase.",
       "- Manage tasks and estimate effort for the FE team, responsible for quality.",
-      "- Technical mentor for interns.",
+      "- Review the code with support team members.",
+      "- Interview and technical training for interns and new junior React developers.",
     ],
   },
   // {

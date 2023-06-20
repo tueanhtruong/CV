@@ -30,11 +30,13 @@ const Banner = () => {
               </Heading>
               <Text as="p">
                 I'm an energetic and hopeful software engineer. I am primarily a
-                Web Front End.  I've been with DataHouse Asia for a year as a
-                software engineer. My strong points are working independently,
-                being interactive, proactive, and being willing to learn.
-                Besides, I am eager to be challenged so that I can grow and
-                improve my skills.
+                Web Front End Developer focusing on React and other support
+                libraries Redux, React Query, Vite, etc. I've been with
+                DataHouse Asia for around 3 years as a software engineer. My
+                strong points are working independently, being interactive,
+                proactive, and being willing to learn. Besides, I am eager to be
+                challenged to grow and improve my skills so that I can
+                contribute the best to the company.
               </Text>
               {/* <Box as="form" sx={styles.banner.form}>
                 <Box as="label" htmlFor="search" variant="styles.srOnly">
