@@ -1,44 +1,51 @@
-import React from "react";
-import { ThemeProvider } from "theme-ui";
-import { StickyProvider } from "contexts/app/app.provider";
-import { VideoProvider } from "contexts/video/video.provider";
-import theme from "theme";
-import SEO from "components/seo";
-import Layout from "components/layout";
-import Modal from "components/modal";
-import Banner from "sections/banner";
-import CtaOne from "sections/cta-one";
-import FAQ from "sections/faq";
-import CtaTwo from "sections/cta-two";
-import WorkFlow from "sections/workflow";
-import Pricing from "sections/pricing";
-import PopularCourse from "sections/popular-course";
-import CtaThree from "sections/cta-three";
-import FavoriteCourse from "sections/favorite-course";
+import { useEffect } from "react";
+import Head from "next/head";
+import Cursor from "../components/Cursor";
+import Loader from "../components/Loader";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Hero from "../sections/Hero";
+import About from "../sections/About";
+import Skills from "../sections/Skills";
+import Projects from "../sections/Projects";
+import Experience from "../sections/Experience";
+import Contact from "../sections/Contact";
 
-export default function IndexPage() {
+export default function Home() {
+  // Global scroll-reveal observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.15 },
+    );
+    document
+      .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+      .forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      <StickyProvider>
-        <VideoProvider>
-          <Layout>
-            <SEO
-              description="I am Tue Truong Front End DEVELOPER based in Da Nang city. My strong points are working independently, being interactive, proactive, and being willing to learn."
-              title="Tue Truong - Software Engineer"
-            />
-            <Banner />
-            <FavoriteCourse />
-            {/* <PopularCourse /> */}
-            <CtaThree />
-            <WorkFlow />
-            {/* <Pricing /> */}
-            <CtaTwo />
-            {/* <FAQ /> */}
-            {/* <CtaOne /> */}
-            <Modal />
-          </Layout>
-        </VideoProvider>
-      </StickyProvider>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Truong Anh Tue — Software Engineer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <Loader />
+      <Cursor />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }

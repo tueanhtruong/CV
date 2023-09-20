@@ -1,15 +1,20 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
-class CustomDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
+class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en-US">
-        <Head />
+      <Html lang="en">
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+          />
+          <meta
+            name="description"
+            content="Truong Anh Tue — Fullstack Software Engineer specializing in design systems, component libraries, and developer experience."
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -19,4 +24,4 @@ class CustomDocument extends Document {
   }
 }
 
-export default CustomDocument;
+export default MyDocument;
