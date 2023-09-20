@@ -5,6 +5,40 @@ import React from "react";
 import ArrowOdd from "assets/arrow-odd.png";
 import ArrowEven from "assets/arrow-even.png";
 
+import resume1 from "assets/cv/Tue_Truong_Software_Engineer-1.jpg";
+import resume2 from "assets/cv/Tue_Truong_Software_Engineer-2.jpg";
+import resume3 from "assets/cv/Tue_Truong_Software_Engineer-3.jpg";
+import ImageBtn from "components/imageBtn";
+export const responsiveSettings = [
+  {
+    breakpoint: 1200,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+    },
+  },
+  {
+    breakpoint: 800,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+    },
+  },
+  {
+    breakpoint: 300,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  },
+];
+const ResumeImages = [resume1, resume2, resume3];
+
+const resumeImagesUrls = ResumeImages.map((u, idx) => ({
+  url: u,
+  title: `Resume ${idx + 1}`,
+}));
+
 const workflowData = [
   {
     title: "Web Developer Intern, Dec 2020 - May 2021",
@@ -66,6 +100,27 @@ const WorkFlow = () => {
             </Box>
           ))}
         </Grid>
+
+        {/* <Slide
+          indicators={true}
+          duration={5000}
+          transitionDuration={500}
+          autoplay={false}
+          slidesToScroll={3}
+          slidesToShow={3}
+          responsive={responsiveSettings}
+        > */}
+        {ResumeImages.map((img, idx) => (
+          <ImageBtn
+            key={`resume-image-${idx}`}
+            sx={{ width: "100%" }}
+            src={img}
+            alt={`resume-${idx}`}
+            startIndex={idx}
+            urls={resumeImagesUrls}
+          />
+        ))}
+        {/* </Slide> */}
       </Container>
     </Box>
   );

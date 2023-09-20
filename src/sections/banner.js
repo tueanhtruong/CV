@@ -15,14 +15,6 @@ const Banner = () => {
         <Flex sx={styles.banner.row}>
           <Box sx={styles.banner.col}>
             <Box sx={styles.banner.content}>
-              {/* <Box sx={styles.banner.stars}>
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                Trused by over 4,332 students
-              </Box> */}
               <Heading as="h1">
                 I’m Tue Truong
                 <br /> SOFTWARE ENGINEER
@@ -38,24 +30,6 @@ const Banner = () => {
                 challenged to grow and improve my skills so that I can
                 contribute the best to the company.
               </Text>
-              {/* <Box as="form" sx={styles.banner.form}>
-                <Box as="label" htmlFor="search" variant="styles.srOnly">
-                  Search
-                </Box>
-                <Input
-                  name="search"
-                  id="search"
-                  placeholder="Search Course Name"
-                  sx={styles.banner.form.input}
-                />
-                <Button
-                  type="submit"
-                  aria-label="search btn"
-                  sx={(styles.banner.form.button, { color: "#02073E" })}
-                >
-                  <IoIosSearch />
-                </Button>
-              </Box> */}
               <Box sx={styles.banner.partner}>
                 <span>Contact me:</span>
                 <a
@@ -87,7 +61,6 @@ const Banner = () => {
                     maxHeight: 680,
                   }}
                 />
-                {/* <VideoBtn path="L9jU-IIN0ng" /> */}
               </Box>
             </Box>
           </Box>

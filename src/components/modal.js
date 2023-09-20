@@ -1,19 +1,19 @@
-import React from 'react';
-import ModalVideo from 'react-modal-video';
-import { useVideoState, useVideoDispatch } from 'contexts/video/video.provider';
+import React from "react";
+import ModalVideo from "react-modal-video";
+import { useVideoState, useVideoDispatch } from "contexts/video/video.provider";
 
 function Modal() {
-  const url = useVideoState('url');
-  const isOpen = useVideoState('isOpen');
+  const url = useVideoState("url");
+  const isOpen = useVideoState("isOpen");
 
   const dispatch = useVideoDispatch();
   const handleVideoClose = () => {
-    dispatch({ type: 'SET_CLOSE' });
+    dispatch({ type: "SET_CLOSE" });
   };
   return (
     <ModalVideo
       channel="youtube"
-      isOpen={isOpen}
+      isOpen={isOpen && url}
       videoId={url}
       onClose={handleVideoClose}
     />
