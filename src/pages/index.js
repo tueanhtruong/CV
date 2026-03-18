@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import Cursor from "../components/Cursor";
-import Loader from "../components/Loader";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Hero from "../sections/Hero";
@@ -34,7 +33,6 @@ export default function Home() {
         <title>Truong Anh Tue — Software Engineer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Loader />
       <Cursor />
       <Nav />
       <main>

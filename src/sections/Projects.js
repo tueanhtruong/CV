@@ -36,7 +36,7 @@ const projects = [
         <rect width="400" height="200" fill="url(#g1)" />
       </svg>
     ),
-    name: "Megenta Design System",
+    name: "Magenta Design System",
     desc: "A unified collection of design standards, components, and guidelines powering the entire ONE ecosystem. Architected for consistency, accessibility, and tree-shakable distribution.",
     tags: ["React", "Storybook", "Panda CSS", "TurboRepo", "tsdown"],
     links: ["90% Test Coverage", "Accessibility A11Y", "Aug 2023 – Now"],

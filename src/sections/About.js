@@ -1,3 +1,10 @@
+import dynamic from "next/dynamic";
+
+const ModelViewer = dynamic(() => import("../components/ModelViewer"), {
+  ssr: false,
+  loading: () => <div className="portrait-initials">TAT</div>,
+});
+
 export default function About() {
   return (
     <section id="about">
@@ -17,7 +24,7 @@ export default function About() {
           </p>
           <p>
             Currently at <strong>One Tech Stop Vietnam</strong>, I architect and
-            lead the Megenta Design System — a unified component library
+            lead the Magenta Design System — a unified component library
             powering the entire ONE ecosystem. I care obsessively about
             accessibility, tree-shakability, and that 90% test coverage line.
           </p>
@@ -63,7 +70,7 @@ export default function About() {
 
         <div className="about-right reveal-right">
           <div className="about-portrait">
-            <div className="portrait-initials">TAT</div>
+            <ModelViewer />
             <div className="portrait-corner tl" />
             <div className="portrait-corner br" />
             <div className="portrait-info">
