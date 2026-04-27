@@ -178,6 +178,107 @@ const projects = [
     links: ["50% Faster Deploys", "Automated"],
     delay: ".2s",
   },
+  {
+    id: "planning-poker",
+    thumbLabel: "PP",
+    thumbBg: "linear-gradient(135deg, #12172b 0%, #071018 100%)",
+    tag: "Personal",
+    tagStyle: {
+      background: "linear-gradient(135deg, #6b7cff 0%, #35d0ff 100%)",
+      color: "#071018",
+    },
+    thumb: (
+      <svg
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          opacity: 0.18,
+        }}
+        viewBox="0 0 400 200"
+      >
+        <defs>
+          <linearGradient id="planningGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#6b7cff" />
+            <stop offset="100%" stopColor="#35d0ff" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M0 40 H400 M0 80 H400 M0 120 H400 M0 160 H400 M80 0 V200 M160 0 V200 M240 0 V200 M320 0 V200"
+          fill="none"
+          stroke="url(#planningGlow)"
+          strokeWidth="0.35"
+        />
+        <rect
+          x="45"
+          y="112"
+          width="46"
+          height="62"
+          rx="8"
+          transform="rotate(-12 68 143)"
+          fill="rgba(107,124,255,0.08)"
+          stroke="#6b7cff"
+          strokeWidth="0.8"
+        />
+        <rect
+          x="103"
+          y="118"
+          width="46"
+          height="62"
+          rx="8"
+          transform="rotate(-6 126 149)"
+          fill="rgba(107,124,255,0.08)"
+          stroke="#6b7cff"
+          strokeWidth="0.8"
+        />
+        <rect
+          x="161"
+          y="124"
+          width="46"
+          height="62"
+          rx="8"
+          fill="rgba(53,208,255,0.08)"
+          stroke="#35d0ff"
+          strokeWidth="0.8"
+        />
+        <rect
+          x="219"
+          y="118"
+          width="46"
+          height="62"
+          rx="8"
+          transform="rotate(6 242 149)"
+          fill="rgba(53,208,255,0.08)"
+          stroke="#35d0ff"
+          strokeWidth="0.8"
+        />
+        <rect
+          x="277"
+          y="112"
+          width="46"
+          height="62"
+          rx="8"
+          transform="rotate(12 300 143)"
+          fill="rgba(53,208,255,0.08)"
+          stroke="#35d0ff"
+          strokeWidth="0.8"
+        />
+      </svg>
+    ),
+    name: "Planning Poker",
+    desc: "A personal project for Scrum and Agile teams to run smooth, real-time estimation sessions with instant room setup, secret voting, shared reveals, and cross-device support.",
+    tags: ["Next.js", "Realtime", "Agile", "Responsive UI"],
+    links: [
+      "Real-time Multiplayer",
+      "Free Forever",
+      {
+        label: "Open App",
+        href: "https://planning-poker.tue-truonga.work/",
+      },
+    ],
+    delay: ".3s",
+  },
 ];
 
 function handleMouseMove(e) {
@@ -235,9 +336,37 @@ export default function Projects() {
               </div>
               <div className="project-links">
                 {p.links.map((link, i) => (
-                  <span key={link} style={{ display: "contents" }}>
+                  <span
+                    key={typeof link === "string" ? link : link.href}
+                    style={{ display: "contents" }}
+                  >
                     {i > 0 && <span className="project-link-divider" />}
-                    <span className="project-link">{link}</span>
+                    {typeof link === "string" ? (
+                      <span className="project-link">{link}</span>
+                    ) : (
+                      <a
+                        className="project-link project-link-external"
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {link.label}
+                        <svg
+                          className="project-link-icon"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M10 5H8.2C7.08 5 6.52 5 6.09 5.22A3 3 0 0 0 5.22 6.09C5 6.52 5 7.08 5 8.2V15.8c0 1.12 0 1.68.22 2.11.19.38.49.68.87.87.43.22.99.22 2.11.22h7.6c1.12 0 1.68 0 2.11-.22.38-.19.68-.49.87-.87.22-.43.22-.99.22-2.11V14M20 9V4m0 0h-5m5 0-7 7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    )}
                   </span>
                 ))}
               </div>

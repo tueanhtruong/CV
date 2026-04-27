@@ -17,7 +17,7 @@ export default function ModelViewer() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 8, 3]} intensity={1.3} />
       <Suspense fallback={null}>
-        <Stage environment="city" intensity={0.6} adjustCamera={false}>
+        <Stage environment={null} intensity={0.6} adjustCamera={false}>
           <HomeModel />
         </Stage>
       </Suspense>

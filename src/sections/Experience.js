@@ -1,6 +1,12 @@
 const timeline = [
   {
-    date: "Aug 2023 — Present",
+    date: "Apr 2026 — Present",
+    company: "One Tech Stop Vietnam",
+    role: "Senior Software Engineer",
+    items: [],
+  },
+  {
+    date: "Aug 2023 — Apr 2026",
     company: "One Tech Stop Vietnam",
     role: "Software Engineer II",
     items: [
@@ -107,13 +113,15 @@ export default function Experience() {
                 <span className="timeline-company">{item.company}</span>
               </div>
               <div className="timeline-role">{item.role}</div>
-              <div className="timeline-body">
-                <ul>
-                  {item.items.map((li, i) => (
-                    <li key={i}>{li}</li>
-                  ))}
-                </ul>
-              </div>
+              {item.items.length > 0 ? (
+                <div className="timeline-body">
+                  <ul>
+                    {item.items.map((li, i) => (
+                      <li key={i}>{li}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </div>
           ))}
         </div>
