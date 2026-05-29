@@ -3,7 +3,32 @@ const timeline = [
     date: "Apr 2026 — Present",
     company: "One Tech Stop Vietnam",
     role: "Senior Software Engineer",
-    items: [],
+    items: [
+      <>
+        Developed a <strong>Design System MCP</strong> (Model Context Protocol)
+        server, enabling AI-assisted component discovery and usage directly
+        within developer workflows
+      </>,
+      <>
+        Centralized multiple dispersed packages into a single source-of-truth
+        package with shared sub-path exports, reducing dependency overhead and
+        improving cross-team consistency
+      </>,
+      <>
+        Contributed to <strong>codemod migration scripts</strong> to automate
+        breaking-change migrations across consuming codebases, minimizing manual
+        effort
+      </>,
+      <>
+        Modernized the documentation site with improved UX, <strong>SSG</strong>
+        , and global full-text search across all documentation pages,
+        significantly enhancing developer discoverability and overall experience
+      </>,
+      <>
+        Conducted technical interviews and contributed to hiring decisions for
+        engineering candidates
+      </>,
+    ],
   },
   {
     date: "Aug 2023 — Apr 2026",
